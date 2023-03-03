@@ -44,7 +44,6 @@ public class ServletEssai extends HttpServlet {
                 listeEmploye.add(unEmploye);
             }
             
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -56,7 +55,7 @@ public class ServletEssai extends HttpServlet {
             for(Employe e : listeEmploye)
             {
                 out.println("<tr><td>" + e.getEmpo()+ "</td>");
-                out.println("<td>" + e.getEname()+ "</td>");
+                out.println("<td><a href='ServletAugment?numero=" + e.getEname() + "'>" + e.getEname() + "</a></td>");
                 out.println("<td>" + e.getJob()+ "</td>");
                 out.println("<td>" + e.getMgr()+ "</td>");
                 out.println("<td>" + e.getHiredate()+ "</td>");
